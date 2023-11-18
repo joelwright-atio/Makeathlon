@@ -2,6 +2,8 @@
 
 [Connect to VPN](#connect-to-vpn)
 
+[Accessing the ThingWorx Server](#Accessing-the-ThingWorx-Server)
+
 [Application Key Tutorial](#application-key-tutorial)
 
 [Create a Gateway](#create-a-gateway)
@@ -60,13 +62,37 @@ This guide provides step-by-step instructions on how to connect to the Atio VPN 
 
 7\. Congratilations, you are signed in to the atio VPN!
 
+## Accessing the ThingWorx Server
+
+This guide provides step-by-step instructions on how to sign into ThingWorx and create an application key. It includes details on entering the username and password, saving login information and selecting the project context.
+
+1\. Start a browser and paste http://192.168.20.3:8080/Thingworx/Composer
+
+![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/45bbb490-5a1d-4ad0-bda7-2144fd21364e/ascreenshot.jpeg?tl_px=0,0&br_px=1719,961&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=430,18)
+
+2\. As long as the VPN is working correctly, when the page loads, a sign in box will show.
+
+3\. In the sign in box, enter "makeathon" as username
+
+![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/1b26d6ae-5c8a-48c9-8040-1e6aa1bdc091/ascreenshot.jpeg?tl_px=459,42&br_px=1319,523&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
+
+4\. enter "atiozebramakeathon" as password
+
+![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/79e7bd62-8d7c-4682-a74c-1ed656f540e3/ascreenshot.jpeg?tl_px=469,114&br_px=1329,595&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
+
+5\. Finally click "Anmelden" to log in.
+
+![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/b0ade0c3-117d-4de1-8d49-8060fdb8c994/ascreenshot.jpeg?tl_px=536,203&br_px=1396,684&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
+
+6\. You can save the username and password in the browser so you do not have to repeat this step.
+
+![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/e6c445c6-e9be-460e-98d0-f11cf811aa2f/ascreenshot.jpeg?tl_px=0,0&br_px=1920,1080&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=797,267)
+
 ## Application Key Tutorial
 
 This guide provides step-by-step instructions on how to set up and configure the AtioThingWorxServer Java project. It covers how to paste the application key in the config.json file and start the server. It also includes instructions on how to open ThingWorx in the browser. By following this guide, users will be able to easily set up and run the AtioThingWorxServer Java project.
 
-1\. Search for "Jet Brains Toolbox" and open the program.
-
-![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/c832ce52-a894-4f4a-8455-3ae16a8aeab5/ascreenshot.jpeg?tl_px=436,599&br_px=1296,1080&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,421)
+1\. In the Windows Search bar, search for "Jet Brains Toolbox" and open the program.
 
 2\. Click on IntelliJ IDEA Community Edition
 
