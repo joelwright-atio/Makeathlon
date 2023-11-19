@@ -9,7 +9,11 @@ Go through iterative designs to work out how best to package the product.
 Here is a link to ThingWorx Commiunity guide and tutorial to building a mashup in ThingWorx:
 https://community.ptc.com/t5/IoT-Tips/Create-Your-Application-UI-Guide-Part-1/ta-p/809008
 
-To access the Atio ThingWorx Server, you need to use the Sophos Client VPN.
+## Prototyping & Figma
+
+Figma is a great way to prototype interface ideas. If you have not used figma before, search for tutorials on youtube to see it used and to follow along with tutorials.
+
+When you are ready to access the Atio ThingWorx Server, you need to use the Sophos Client VPN.
 
 ## Connect to VPN
 

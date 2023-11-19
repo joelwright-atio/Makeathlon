@@ -192,7 +192,7 @@ This guide provides step-by-step instructions on configuring a remote test servi
 
 2\. Scroll down to aproximately line 52 and paste the following code:
 
-```
+```java
 @ThingworxServiceDefinition(name = "TestService", description = "A basic test service")
 @ThingworxServiceResult(name = "result", description = "returns a random number.", baseType = "INTEGER")
 public static Integer TestService(@ThingworxServiceParameter(name = "input", description = "Is the input number", baseType = "INTEGER") Integer input) throwsException {
@@ -391,19 +391,20 @@ This guide provides step-by-step instructions on how to call a service periodica
 
 35\. Paste the following code into the service
 
-```
+```js
 let client = me.client;
 let randomNumber = Math.random();
 // result: INTEGER
 let result = Things["makeathon.gateway"].TestService({
-	input: randomNumber /* INTEGER */
+  input: randomNumber /* INTEGER */,
 });
 
-me.testValue=result;
-
+me.testValue = result;
 ```
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/b2d44c47-98be-407a-8872-e60ac66eb270/ascreenshot.jpeg?tl_px=115,21&br_px=1835,982&force_format=png&width=1120.0)
+
+Note: within ThingWorx, Java Script notation is used.
 
 36\. Click "Save and Continue"
 
@@ -459,10 +460,8 @@ me.testValue=result;
 
 49\. In the main panel, type the following code, which is the previously written service:
 
-```
-
+```js
 me.UpdateTestValues();
-
 ```
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/606feb2f-a60f-4993-8291-8ad9839ce99a/ascreenshot.jpeg?tl_px=662,279&br_px=1522,760&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
