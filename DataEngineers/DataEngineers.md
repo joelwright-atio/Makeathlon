@@ -216,3 +216,64 @@ DELETE FROM TableName WHERE Condition;
 ## Java Database connector
 
 You will need to write to the database, not from the management studio, but instead from a java program where the ModBus TCP signals can be read.
+
+## cpde fpr java
+
+```java
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class SqlTableReaderService {
+
+    // JDBC URL, username, and password of MySQL server
+    private static final String URL = "jdbc:mysql://localhost:3306/your_database";
+    private static final String USER = "your_username";
+    private static final String PASSWORD = "your_password";
+
+    // JDBC variables for opening, closing, and managing connection
+    private static Connection connection;
+    private static PreparedStatement preparedStatement;
+    private static ResultSet resultSet;
+
+    public static void main(String[] args) {
+        try {
+            // Establish a connection
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+
+            // Prepare a statement to execute SQL query
+            String sqlQuery = "SELECT id, name FROM example_table";
+            preparedStatement = connection.prepareStatement(sqlQuery);
+
+            // Execute the query and get the result set
+            resultSet = preparedStatement.executeQuery();
+
+            // Process the result set
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+
+                // Do something with the data (e.g., print it)
+                System.out.println("ID: " + id + ", Name: " + name);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close the resources in a finally block to ensure they are always closed
+            try {
+                if (resultSet != null) resultSet.close();
+                if (preparedStatement != null) preparedStatement.close();
+                if (connection != null) connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+```
