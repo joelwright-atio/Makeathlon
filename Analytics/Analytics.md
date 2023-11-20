@@ -15,12 +15,15 @@ https://reich-dev1.cloud.thingworx.com/Thingworx/Composer/
 
 You will find the CSV file you are required to upload, during the tutorial as well as a .txt file which contains code snippits within this GitHub repository. Download these files locally before starting.
 
-Username: makeathon
-Password: changeme123456
+- Username: makeathon
+- Password: changeme123456
 
-The purpose of the tutorial is to introduce you to what a thing works analytics can do.
+The purpose of the tutorial is to introduce you to what a ThingWorks analytics can do, and the value it can bring to a business.
+
 Once you have completed the tutorial, you need to apply what you have learned from first principles. You will need to answer the following questions:
-What data can we collect?
-How can we create useful metrics to enrich the data for a model?
-What statistics can we introduce to start building a dataset.
+
+- What data can we collect?
+- How can we create useful metrics to enrich the data for a model?
+- What statistics can we introduce to start building a dataset.
+
 Your task is to create a vision for how analytics can be used for this project’s use case, and start to implement it.
