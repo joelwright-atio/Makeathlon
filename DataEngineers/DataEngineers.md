@@ -1,14 +1,50 @@
-# Data Engineers Guidence
+# Data Engineers Guidance
 
-First, you will need to unertand Modbus TCP connection.
+First, you will need to understand Modbus TCP connection.
 
 https://www.youtube.com/watch?v=txi2p5_OjKU
 
-You can first use Modbus Slave and qModMaster to simulate comminucation.
+You can first use Modbus Slave and qModMaster to simulate communication.
 
 You will need to find the addresses for the communication via the instruction manual for the robot arm. You can find that on YouTube
 
-You will then need to read the signals in Java, and work with the thingWorx backend Enginners to forward the signals from the robot on to the ThingWorx server.
+You will then need to read the signals in Java, and work with the ThingWorx backend Engineers to forward the signals from the robot on to the ThingWorx server.
+
+[Reading from a Modbus Slave with QModMaster](#reading-from-a-modbus-slave-with-qmodmaster)
+
+[Reading data from the robot](#reading-data-from-the-robot)
+
+[Java](#java)
+
+[Saving Data](#saving-data)
+
+[View data in the Microsoft SQL Server Management Studio](#view-data-in-the-microsoft-sql-server-management-studio)
+
+[SQL guide](#SQL-guide)
+
+[Java Database connector](#java-database-connector)
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
 
 ## Reading from a Modbus Slave with QModMaster
 
@@ -24,12 +60,12 @@ I have a Modbus Slave client running on my laptop. I will give you the local IP 
 
 3\. Click "Modbus TCP"
 This brings up the Setting box where you can enter the TCP port of 502 (default)
-And change the IP address to the local ip address of my laptop. I will give you the IP adress when you ask for it.
+And change the IP address to the local IP address of my laptop. I will give you the IP address when you ask for it.
 Click "Modbus Mode" to change it from RTU to TCP
 Click "TCP"
 Change the "Function Code" drop down
 Click "Read Holding Registers (0x03)"
-Change the data ouput format from Binary to Decimal
+Change the data output format from Binary to Decimal
 Click "Dec"
 Click "Connect"
 Click "Scan"
@@ -37,13 +73,13 @@ Congratulations, You are reading data from my laptop via Modbus TCP!
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2023-11-19/aa217ca3-528f-4e71-a558-25301d6b3f99/stack_animation.webp)
 
-4\. Answer the following question: How would you access other Data being sent over the same Modbus slave channel. And how can you visulize multiple data points at the same time?
+4\. Answer the following question: How would you access other Data being sent over the same Modbus slave channel. And how can you visualize multiple data points at the same time?
 
 Answer: experiment in QModMaster with the Start Address and the Number of Registers.
 
 ## Reading data from the robot
 
-With the robot manual, find the correct settings you require. Work with the Robot team to find the IP adress of the robot.
+With the robot manual, find the correct settings you require. Work with the Robot team to find the IP address of the robot.
 
 Hint: if the robot is not connected to a network, then you will need to use an Ethernet Cabel and networking bridge.
 
@@ -65,7 +101,7 @@ Because the Client delivering data to ThingWorx leverages the Java ThingWorx SDK
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-19/3105efe8-9cfd-45ef-aa5a-0ada6245e5c1/ascreenshot.jpeg?tl_px=1059,195&br_px=1919,676&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
 
-4\. On the project explorer pannel, find the TestModbus class, double click to select it.
+4\. On the project explorer panel, find the TestModbus class, double click to select it.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-19/fd8dbe02-c896-4c99-ae68-ddb18ef4252f/ascreenshot.jpeg?tl_px=0,0&br_px=1920,1080&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=151,325)
 
@@ -85,17 +121,17 @@ Tip: Spend some time understanding this code and comparing it to QModMaster. Mak
 
 ## Saving Data
 
-You need to be cognasant that the data you read will be required by the other groups.
+You need to be cognizant that the data you read will be required by the other groups.
 
 You need to work with the ThingWorx Backend group so that data is fed into ThingWorx.
 
-You also need to be cognasant that the Analytics group needs historical data.
+You also need to be cognizant that the Analytics group needs historical data.
 
 You can do the latter by saving data to SQL.
 
 If you have not done this before, Generative AI can really help you.
 
-## How to Open the Microsoft SQL Server Management Studio
+## View data in the Microsoft SQL Server Management Studio
 
 1\. Click "Start"
 
@@ -129,13 +165,13 @@ If you have not done this before, Generative AI can really help you.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-19/54de8c24-a8ef-438b-8015-c0a099977eb5/ascreenshot.jpeg?tl_px=0,249&br_px=859,730&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=209,212)
 
-9\. This shows the SQL query in the top pannel and the result of the query the bottom.
+9\. This shows the SQL query in the top panel and the result of the query the bottom.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-19/7f61c8a9-ff4b-4237-af20-df012f41824c/user_cropped_screenshot.jpeg?tl_px=0,0&br_px=1920,1080&force_format=png&width=1120.0)
 
 Next Steps are to learn to use SQL databases by creating your own tables, adding data to the tables, reading data to the tables, how to edit/update data in the tables and learning how to delete data in the tables.
 
-## SQL guide:
+## SQL guide
 
 Inside your database, right-click on "Tables" and select "New Table." Define the columns, data types, and constraints for your table. Use the following template:
 
@@ -150,7 +186,7 @@ CREATE TABLE TableName
 
 ```
 
-It is important to undertand what datatype you need:
+It is important to understand what datatype you need:
 
 | Data Type     | Description                              |
 | ------------- | ---------------------------------------- |
@@ -217,63 +253,26 @@ DELETE FROM TableName WHERE Condition;
 
 You will need to write to the database, not from the management studio, but instead from a java program where the ModBus TCP signals can be read.
 
-## cpde fpr java
+See the code in class TestSQL.java
 
-```java
+Identify the sql statements in each of the methods:
 
+- readSQLTable();
+- writeToSQLTable("Hello", "World");
+- createSQLTable();
+- deleteFromSQLTable("test", "Hello", "World");
+- deleteSQLTable("test");
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+Comment and uncomment the services in the main method, to see how in java executes SQL statements.
 
-public class SqlTableReaderService {
+### Troubleshooting
 
-    // JDBC URL, username, and password of MySQL server
-    private static final String URL = "jdbc:mysql://localhost:3306/your_database";
-    private static final String USER = "your_username";
-    private static final String PASSWORD = "your_password";
+You may need to adjust the SQL Server settings before the services in Java may access the database.
 
-    // JDBC variables for opening, closing, and managing connection
-    private static Connection connection;
-    private static PreparedStatement preparedStatement;
-    private static ResultSet resultSet;
+Please follow these instructions to make sure the server is available on port 1433:
 
-    public static void main(String[] args) {
-        try {
-            // Establish a connection
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+https://kb.variphy.com/knowledge-base/how-to-set-static-tcp-port-1433-in-microsoft-sql-server-express/
 
-            // Prepare a statement to execute SQL query
-            String sqlQuery = "SELECT id, name FROM example_table";
-            preparedStatement = connection.prepareStatement(sqlQuery);
+### Task
 
-            // Execute the query and get the result set
-            resultSet = preparedStatement.executeQuery();
-
-            // Process the result set
-            while (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                String name = resultSet.getString("name");
-
-                // Do something with the data (e.g., print it)
-                System.out.println("ID: " + id + ", Name: " + name);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            // Close the resources in a finally block to ensure they are always closed
-            try {
-                if (resultSet != null) resultSet.close();
-                if (preparedStatement != null) preparedStatement.close();
-                if (connection != null) connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-}
-
-```
+Write your own methods in Java to create a table within the atio database and writing data from the robot.

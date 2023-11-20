@@ -1,12 +1,23 @@
-# UI/UX Guidence
+# UI/UX Guidance
+
+[Getting Started](#getting-started)
+
+[Prototyping In Figma](#prototyping--figma)
+
+[Connect to the VPN](#connect-to-vpn)
+
+[Access the ThingWorx Server](#accessing-the-thingworx-server)
+
+## Getting Started
 
 You first need to research what a good Dashboard looks like.
 
-You are primerily responsable for the asthetic of the digital product, but nevertheless, this must contain data that is of interest to the user.
+You are primarily responsible for the look & feel of the digital product, but nevertheless, this must contain data that is of interest to the user.
 
 Go through iterative designs to work out how best to package the product.
 
-Here is a link to ThingWorx Commiunity guide and tutorial to building a mashup in ThingWorx:
+Here is a link to ThingWorx Community guide and tutorial to building a mashup in ThingWorx:
+
 https://community.ptc.com/t5/IoT-Tips/Create-Your-Application-UI-Guide-Part-1/ta-p/809008
 
 ## Prototyping & Figma
@@ -41,7 +52,7 @@ This guide provides step-by-step instructions on how to connect to the Atio VPN 
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/93f9814c-dda1-4499-a0c1-48ced512a57c/ascreenshot.jpeg?tl_px=0,224&br_px=859,705&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=288,212)
 
-7\. Congratilations, you are signed in to the atio VPN!
+7\. Congratulations, you are signed in to the atio VPN!
 
 Next step is to access the ThingWorx Server via your browser.
 
@@ -59,7 +70,7 @@ This guide provides step-by-step instructions on how to sign into ThingWorx and 
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/1b26d6ae-5c8a-48c9-8040-1e6aa1bdc091/ascreenshot.jpeg?tl_px=459,42&br_px=1319,523&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
 
-4\. enter "atiozebramakeathon" as password
+4\. Enter "atiozebramakeathon" as password
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/79e7bd62-8d7c-4682-a74c-1ed656f540e3/ascreenshot.jpeg?tl_px=469,114&br_px=1329,595&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
 
@@ -70,3 +81,7 @@ This guide provides step-by-step instructions on how to sign into ThingWorx and 
 6\. You can save the username and password in the browser so you do not have to repeat this step.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/e6c445c6-e9be-460e-98d0-f11cf811aa2f/ascreenshot.jpeg?tl_px=0,0&br_px=1920,1080&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=797,267)
+
+## Next Steps
+
+Now that you are logged on to the ThingWorx server, try and follow along with the tutorials in the [getting started](#getting-started) section. When you are comfortable with how to build a mashup and bind data, try to bring some of your prototyped dashboards to life using the ThingWorx Widgets.

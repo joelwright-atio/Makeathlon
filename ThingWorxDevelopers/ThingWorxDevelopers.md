@@ -60,7 +60,7 @@ This guide provides step-by-step instructions on how to connect to the Atio VPN 
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/93f9814c-dda1-4499-a0c1-48ced512a57c/ascreenshot.jpeg?tl_px=0,224&br_px=859,705&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=288,212)
 
-7\. Congratilations, you are signed in to the atio VPN!
+7\. Congratulations, you are signed in to the atio VPN!
 
 ## Accessing the ThingWorx Server
 
@@ -190,7 +190,7 @@ This guide provides step-by-step instructions on configuring a remote test servi
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/0285ebea-77ae-4fe1-bcc5-e0760697ad00/ascreenshot.jpeg?tl_px=0,343&br_px=859,824&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=322,212)
 
-2\. Scroll down to aproximately line 52 and paste the following code:
+2\. Scroll down to approximately line 52 and paste the following code:
 
 ```java
 @ThingworxServiceDefinition(name = "TestService", description = "A basic test service")
@@ -219,7 +219,7 @@ public static Integer TestService(@ThingworxServiceParameter(name = "input", des
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/52f8eb15-6366-483f-9ce8-6fbe6f51c3d8/ascreenshot.jpeg?tl_px=164,0&br_px=1883,961&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,226)
 
-7\. Drag the service accross.
+7\. Drag the service across.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/b29e648c-8a19-4cfa-866d-8d69fe9d7fc8/user_cropped_screenshot.jpeg?tl_px=0,0&br_px=1920,1080&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=291,186)
 
@@ -235,7 +235,7 @@ public static Integer TestService(@ThingworxServiceParameter(name = "input", des
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/2ddb3e44-ebd0-4454-93be-87041a77a012/ascreenshot.jpeg?tl_px=0,32&br_px=1719,993&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=325,276)
 
-11\. Enter a integer
+11\. Enter an integer
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/8ee001d6-34f9-4dd9-ba83-83ded0ff6521/ascreenshot.jpeg?tl_px=543,435&br_px=1403,916&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
 
@@ -305,11 +305,11 @@ This guide provides step-by-step instructions on how to call a service periodica
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/b2a3d78f-81c5-4f25-8461-2d337239ceec/ascreenshot.jpeg?tl_px=1060,0&br_px=1920,480&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=652,186)
 
-14\. create the next property called t"estValue"
+14\. create the next property called "testValue"
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/1eeeea01-bb93-4cc9-af1c-4a59ebe720a6/ascreenshot.jpeg?tl_px=876,275&br_px=1736,756&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
 
-15\. Change the BaseType to "INTEGER" and make the property Persistant
+15\. Change the BaseType to "INTEGER" and make the property Persistent
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/2fd86e5c-4a99-4aa0-a064-fb538b30c259/ascreenshot.jpeg?tl_px=200,118&br_px=1920,1080&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=617,454)
 
@@ -377,7 +377,7 @@ This guide provides step-by-step instructions on how to call a service periodica
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/ddad261c-c2cd-4769-a344-61bf5a02e7ee/ascreenshot.jpeg?tl_px=406,0&br_px=1266,480&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,114)
 
-32\. On the makeathon.robot thing, go to the services Tab. This will host the code for the subscrption which will be executed periodically.
+32\. On the makeathon.robot thing, go to the services Tab. This will host the code for the subscription which will be executed periodically.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/ef9ba058-a8d5-41c5-8a67-aad81dbb78cc/ascreenshot.jpeg?tl_px=530,31&br_px=1390,512&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
 
@@ -418,7 +418,7 @@ Note: within ThingWorx, Java Script notation is used.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/e21e0b3d-6c9d-442f-a913-62d8392a2c4d/user_cropped_screenshot.jpeg?tl_px=0,0&br_px=1920,1080&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=416,115)
 
-39\. See that the result is sucessfully written to the property
+39\. See that the result is successfully written to the property
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/d7f1ca2b-4340-47f2-95b2-018a7ea97fe9/ascreenshot.jpeg?tl_px=779,323&br_px=1639,804&force_format=png&width=860&wat_scale=76&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=402,212)
 
@@ -481,3 +481,7 @@ me.UpdateTestValues();
 53\. Click "Refresh" and verify that the property "testValue" is being updated every 5 seconds.
 
 ![](https://ajeuwbhvhr.cloudimg.io/colony-recorder.s3.amazonaws.com/files/2023-11-18/17be6def-1fae-4f34-b46e-9239039eeb09/ascreenshot.jpeg?tl_px=200,0&br_px=1920,961&force_format=png&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=701,227)
+
+## Next Steps
+
+Well done for completing the tutorials! Now, work with the data team to bring data from the robot into ThingWorx using the methodology you have learned.
