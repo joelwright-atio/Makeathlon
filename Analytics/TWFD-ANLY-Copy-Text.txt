@@ -1,0 +1,93 @@
+// ** Operationalize the Predictive Model: Operationalize the Predictive Model **
+//Construct infotable of predictive model inputs
+var params = {
+	infoTableName: undefined //STRING
+};
+var inputdata = Resources["InfoTableFunctions"].CreateInfoTable(params);
+inputdata.AddField({name: "AmbientTemperature", baseType: "NUMBER"});
+inputdata.AddField({name: "SolderTankLevel", baseType: "NUMBER"});
+// Add ambient temperature and tank level data row to infotable
+inputdata.AddRow({
+    AmbientTemperature : me.AmbientTemperature,
+    SolderTankLevel : Things["SolderMachine1"].TankLevel
+});
+//Refer to inputdata infotable in an AnalyticsDatasetRef infotable
+params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "AnalyticsDatasetRef"
+};
+var datasetref = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+var newEntry = new Object();
+newEntry.data = inputdata; // INFOTABLE
+datasetref.AddRow(newEntry);
+// Setup inputs for RealtimeScore service
+var realtimeScoreParams = {
+	modelUri: "results:/models/%%%", // STRING ,
+	datasetRef: datasetref // INFOTABLE 
+};
+var predictiveScores =  Things["AnalyticsServer_PredictionThing"].RealtimeScore(realtimeScoreParams);
+var row =  predictiveScores.getRow(0); 
+result = row.getValue("Good Part Ratio");
+
+// ** Create a Prescriptive Model: Author a Prescriptive Service **
+var params = {
+	infoTableName: undefined //STRING
+};
+var inputdata = Resources["InfoTableFunctions"].CreateInfoTable(params);
+inputdata.AddField({name: "AmbientTemperature", baseType: "NUMBER"});
+inputdata.AddField({name: "SolderTankLevel", baseType: "NUMBER"});
+// Add ambient temperature and tank level data row to infotable
+inputdata.AddRow({
+    AmbientTemperature : me.AmbientTemperature,
+    SolderTankLevel : Things["SolderMachine1"].TankLevel
+});
+
+params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "AnalyticsOptimizationLever"
+};
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(AnalyticsOptimizationLever)
+var levers = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+levers.AddRow({fieldName: "SolderTankLevel"});  // Adjust tank level
+
+//Refer to inputdata infotable in an AnalyticsDatasetRef infotable
+params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "AnalyticsDatasetRef"
+};
+var datasetref = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+var newEntry = new Object();
+newEntry.data = inputdata; // INFOTABLE
+datasetref.AddRow(newEntry);
+
+var prescriptiveScores =  Things["AnalyticsServer_PrescriptiveThing"].RealtimeScore({
+	maximize: true,
+    goalField: "Good Part Ratio",
+	levers: levers,
+	modelUri: "results:/models/%%%",
+	datasetRef: datasetref
+});
+
+params = {
+	infoTableName: undefined //STRING
+};
+
+result = Resources["InfoTableFunctions"].CreateInfoTable(params);
+result.AddField({name: "originalOdds", baseType: "NUMBER"});
+result.AddField({name: "optimalOdds", baseType: "NUMBER"});
+result.AddField({name: "originalTankLevel", baseType: "NUMBER"});
+result.AddField({name: "optimalTankLevel", baseType: "NUMBER"});
+// Add ambient temperature and tank level data row to infotable
+result.AddRow({
+    originalOdds : prescriptiveScores.rows[0].originalScore, 
+    optimalOdds : prescriptiveScores.rows[0].optimizedScore,
+    originalTankLevel: prescriptiveScores.rows[0].SolderTankLevel_originalValue,
+    optimalTankLevel: prescriptiveScores.rows[0].SolderTankLevel_optimalValue
+});
+
+// ** Adjust the Solder Tank Level Automatically: Author a Subscription to Adjust the Solder Tank Level If the Predicted Odds of a Good Part Are Less Than 99.5% **
+if (Things["PCBMfgLine"].GetGoodPartOdds() < 0.995) {
+    me.TankLevel = 
+        Things["PCBMfgLine"].GetOptimalTankLevelPrediction().rows[0].optimalTankLevel;
+}
+
