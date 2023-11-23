@@ -17,4 +17,4 @@ Links for the 2023 Makeathon:
 [TM5-900](https://assets.omron.eu/downloads/manual/en/v9/i626_tm_flow_software_installation_manual_en.pdf)
 
 ## Code Repository
-[Java Client]()
+[Java Client](https://github.com/joelwright-atio/Makeathon/tree/main/CodeRepository)
