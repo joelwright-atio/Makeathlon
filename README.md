@@ -1,4 +1,4 @@
-# Makeathlon
+# Makeathon
 Links for the 2023 Makeathon:
 
 [Analytics Team](https://github.com/joelwright-atio/Makeathlon/blob/main/Analytics/Analytics.md)
